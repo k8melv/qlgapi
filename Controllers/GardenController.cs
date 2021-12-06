@@ -33,9 +33,9 @@ namespace api.Controllers
             return dataHandler.SelectID(id);
         }
 
-        // GET: api/Garden/5
+        // GET: api/Garden/highestid
         [EnableCors("OpenPolicy")]
-        [HttpGet("highestid", Name = "highestid")]
+        [HttpGet("gardenhighestid", Name = "gardenhighestid")]
         public List<Garden> GetHighestID()
         {
             IGardenDataHandler dataHandler = new GardenDataHandler();
