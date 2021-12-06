@@ -35,7 +35,7 @@ namespace api.Controllers
 
         // GET: api/PlantInformation/highestid
         [EnableCors("OpenPolicy")]
-        [HttpGet("{highestid}", Name = "highestid")]
+        [HttpGet("highestid", Name = "highestid")]
         public List<PlantInformation> GetHighestID()
         {
             IPlantInformationDataHandler dataHandler = new PlantInformationDataHandler();
