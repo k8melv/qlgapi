@@ -33,6 +33,15 @@ namespace api.Controllers
             return dataHandler.SelectID(id);
         }
 
+        // GET: api/Garden/5
+        [EnableCors("OpenPolicy")]
+        [HttpGet("highestid", Name = "highestid")]
+        public List<Garden> GetHighestID()
+        {
+            IGardenDataHandler dataHandler = new GardenDataHandler();
+            return dataHandler.SelectHighest();
+        }
+
         // POST: api/Garden
         [EnableCors("OpenPolicy")]
         [HttpPost]
